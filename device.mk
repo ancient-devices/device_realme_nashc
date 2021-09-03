@@ -319,11 +319,50 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 PRODUCT_COPY_FILES += \
+<<<<<<< HEAD
     $(LOCAL_PATH)/configs/perf/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
     $(LOCAL_PATH)/configs/perf/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
     $(LOCAL_PATH)/configs/perf/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 
 # Public libraries
+=======
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.persist \
+    fstab.qcom \
+    init.insmod.sh \
+    init.msm.usb.configfs.rc \
+    init.performance_level.rc \
+    init.power.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
+
+# RCS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
+
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio@1.5 \
+    android.hardware.secure_element@1.1 \
+    libjson \
+    libprotobuf-cpp-full \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat \
+    librmnetctl \
+    libxml2
+
+# Seccomp policy
+>>>>>>> 64c4c1fc... violet: init: Add script for exTHmUI's GameMode performance control
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
