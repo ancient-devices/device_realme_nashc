@@ -356,6 +356,7 @@ PRODUCT_PACKAGES += \
     init.mt6785.usb.rc \
     init.nfc_detect.rc \
     init.project.rc \
+	init.performance_level.rc \
     init.sensor_1_0.rc \
     init.target.rc \
     ueventd.mtk.rc \
